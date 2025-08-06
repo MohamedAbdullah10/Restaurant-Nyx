@@ -1,0 +1,370 @@
+﻿@model IEnumerable<PL.ViewModels.MenuItems.MenuItemViewModel>
+@{
+    ViewData["Title"] = "Welcome to Nyx Restaurant!";
+}
+
+<style>
+    /* Custom CSS for Restaurant Home Page - Dark/Haunting Theme */
+    body {
+        /* الخلفية العامة تم تعريفها في _Layout.cshtml */
+        overflow-x: hidden; /* لمنع ظهور scrollbar أفقي */
+    }
+
+    .hero-section {
+        background: url('/images/nyx-hero.webp') no-repeat center center/cover;
+        color: #f8f9fa; /* نص فاتح */
+        padding: 150px 0; /* مساحة أكبر */
+        text-shadow: 0 0 15px rgba(0,0,0,0.9), 0 0 5px rgba(0,0,0,0.5); /* ظلال نصية قوية */
+        text-align: center;
+        margin-bottom: 80px;
+        position: relative;
+        overflow: hidden; /* لإخفاء أي جزء من الصورة يخرج عن النطاق */
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.6); /* طبقة شفافة داكنة جداً */
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-section h1 {
+        font-family: 'Cinzel Decorative', cursive; /* خط زخرفي يعطي إحساس بالغموض */
+        font-size: 5rem; /* حجم أكبر */
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #e0e0e0; /* لون أفتح قليلاً للعنوان */
+        animation: fadeInDown 1.5s ease-out;
+        letter-spacing: 2px; /* تباعد بين الحروف */
+    }
+
+    .hero-section p {
+        font-family: 'Times New Roman', serif;
+        font-size: 2rem;
+        margin-bottom: 50px;
+        animation: fadeInUp 1.5s ease-out;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+    }
+
+    .call-to-action .btn {
+        font-size: 1.4rem;
+        padding: 20px 45px;
+        border-radius: 40px; /* شكل دائري أكثر */
+        font-weight: bold;
+        transition: all 0.5s cubic-bezier(.25,.8,.25,1); /* Smooth transition */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .call-to-action .btn-warning {
+        background-color: #8a2be2; /* لون بنفسجي داكن */
+        border-color: #8a2be2;
+        color: white;
+    }
+
+        .call-to-action .btn-warning:hover {
+            background-color: #6a1aae;
+            border-color: #6a1aae;
+            transform: translateY(-8px) scale(1.05); /* تأثير عند الـ hover */
+            box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+        }
+
+    .call-to-action .btn-outline-light {
+        border-color: #f8f9fa;
+        color: #f8f9fa;
+    }
+
+        .call-to-action .btn-outline-light:hover {
+            background-color: rgba(255,255,255,0.15);
+            color: #8a2be2; /* تغيير اللون عند الـ hover */
+            border-color: #8a2be2;
+        }
+
+    .section-title {
+        color: #e0e0e0; /* لون العنوان */
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 3.5rem;
+        position: relative;
+        padding-bottom: 20px;
+        text-shadow: 0 0 10px rgba(138,43,226,0.5); /* ظل بلون مميز */
+    }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 5px;
+            width: 100px;
+            background-color: #8a2be2; /* لون الخط أسفل العنوان */
+            border-radius: 2px;
+        }
+
+    .menu-item-card {
+        border: 1px solid #333; /* حدود خفيفة داكنة */
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        background-color: #222; /* خلفية الكارت داكنة */
+        color: #f8f9fa; /* نص فاتح داخل الكارت */
+    }
+
+        .menu-item-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            border-color: #8a2be2; /* حدود بلون مميز عند الـ hover */
+        }
+
+        .menu-item-card .card-img-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            height: 250px;
+            background-color: #111;
+            border-bottom: 1px solid #333;
+        }
+
+            .menu-item-card .card-img-container img {
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                scroll-snap-align: start;
+            }
+
+        .menu-item-card .card-body {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .menu-item-card .card-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(138,43,226,0.3);
+        }
+
+        .menu-item-card .card-text {
+            color: #ccc;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .menu-item-card .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00ff00;
+            margin-bottom: 25px;
+            text-shadow: 0 0 8px rgba(0,255,0,0.5);
+        }
+
+        .menu-item-card .btn-outline-primary {
+            border-color: #8a2be2;
+            color: #8a2be2;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+        }
+
+            .menu-item-card .btn-outline-primary:hover {
+                background-color: #8a2be2;
+                color: white;
+            }
+
+    .about-us-section {
+        background-color: #222;
+        padding: 100px 0;
+        margin-top: 80px;
+        box-shadow: inset 0 8px 25px rgba(0,0,0,0.3);
+        color: #f8f9fa;
+    }
+
+        .about-us-section h2 {
+            color: #e0e0e0;
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        .about-us-section p {
+            color: #ccc;
+            font-size: 1.25rem;
+            line-height: 1.9;
+        }
+
+        .about-us-section img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+    .contact-section {
+        background-color: #0a0a0a;
+        padding: 100px 0;
+        text-align: center;
+        color: #f8f9fa;
+        border-top: 5px solid #8a2be2;
+    }
+
+        .contact-section h2 {
+            color: white;
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        .contact-section p {
+            font-size: 1.3rem;
+            color: #bbb;
+            line-height: 1.8;
+        }
+
+        .contact-section a {
+            color: #8a2be2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .contact-section a:hover {
+                text-decoration: underline;
+                color: #6a1aae;
+            }
+
+    /* Animations */
+    @@keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Google Fonts */
+    @@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+</style>
+
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Welcome to Nyx Restaurant!</h1>
+        <p>Step into the shadows, where culinary nightmares come to life. Indulge in an experience crafted for the bold, the curious, and the eternally hungry. Each dish a whispered secret, every bite a haunting delight.</p>
+        <div class="call-to-action">
+            <a asp-controller="Orders" asp-action="Create" class="btn btn-warning me-3"><i class="fas fa-utensils"></i> Summon Your Feast!</a>
+            <a asp-controller="MenuItems" asp-action="Index" class="btn btn-outline-light"><i class="fas fa-book-open"></i> Gaze Upon Our Full Menu</a>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <h2 class="section-title">Whispers from the Kitchen</h2>
+    <div class="row justify-content-center">
+        @if (Model != null && Model.Any())
+        {
+            // Define image paths for the menu items
+            var imagePaths = new List<string>
+        {
+        "/images/2.jpg",  
+        "/images/1.jpg",  
+        "/images/3.jpg"   
+        };
+            var defaultDishImagePath = "/images/default-dish.jpg";
+
+            var counter = 0;
+            foreach (var item in Model.Take(3))
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card menu-item-card">
+                        <div class="card-img-container">
+                            @if (counter < imagePaths.Count)
+                            {
+                                <img src="@imagePaths[counter]" class="card-img-top" alt="@item.Name">
+                            }
+                            else
+                            {
+                                <img src="@defaultDishImagePath" class="card-img-top" alt="Default Dish">
+                            }
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">Category: @item.CategoryName</p>
+                            <p class="price">@item.Price.ToString("C")</p>
+                            <a asp-controller="Orders" asp-action="Create" class="btn btn-sm btn-outline-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                counter++;
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center text-muted">
+                <p>The culinary spirits are resting. No signature dishes manifest at the moment.</p>
+                <p>Whisper new ingredients into existence from the admin panel!</p>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="about-us-section">
+    <div class="container">
+        <h2 class="section-title">The Lore of Nyx</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2">
+                <img src="@Url.Content("~/images/nyx-about.jpg")" class="img-fluid rounded shadow-sm" alt="The Dark Origins of Nyx Restaurant">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <p>
+                    Nyx Restaurant is not merely a place of sustenance, but a realm where shadows dance and flavors conspire. Born from ancient legends and forbidden recipes, our culinary journey began in the deepest hours of the night. We invite you to partake in dishes whispered from forgotten dreams, prepared by hands guided by an unseen force.
+                </p>
+                <p>
+                    Our culinary alchemists, under the shroud of mystery, blend arcane ingredients with earthly delights, crafting a symphony of tastes that will linger long after the last bite. Come join us, if you dare, and unveil the secrets of Nyx.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Seek Us Out</h2>
+        <p>
+            Find us at: [Your Restaurant Address: e.g., 123 Culinary Lane, Downtown, City, Country] <br>
+            Call us: <a href="tel:+1234567890">[Your Phone Number: e.g., +123 456 7890]</a> <br>
+            Email us: <a href="mailto:info@nyxrestaurant.com">info@nyxrestaurant.com</a>
+        </p>
+        <p class="lead mt-4">
+            We can't wait to welcome you!
+        </p>
+    </div>
+</section>
+
+@section Scripts {
+    @* Font Awesome Kit is loaded in _Layout.cshtml <head> section *@
+}

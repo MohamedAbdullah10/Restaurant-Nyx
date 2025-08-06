@@ -1,0 +1,31 @@
+﻿@model PL.ViewModels.MenuItems.MenuItemCreateEditViewModel
+
+@{
+    ViewData["Title"] = "Create Menu Item";
+}
+
+<h1>Create Menu Item</h1>
+
+<h4>Menu Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.AntiForgeryToken()
+
+            <partial name="PartialViews/_MenuItemForm" model="Model" />
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

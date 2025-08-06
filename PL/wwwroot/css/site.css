@@ -1,0 +1,603 @@
+/* Google Fonts - ÌÃ» √‰  ﬂÊ‰ ›Ì »œ«Ì… «·„·› */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+/* Custom Scrollbar for dark theme (for card-img-container) */
+.card-img-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.card-img-container::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.card-img-container::-webkit-scrollbar-thumb {
+    background: #8a2be2; /* ·Ê‰ »‰›”ÃÌ ··„ƒ‘— */
+    border-radius: 10px;
+}
+
+    .card-img-container::-webkit-scrollbar-thumb:hover {
+        background: #6a1aae;
+    }
+
+/* Base colors for the dark, haunting theme */
+:root {
+    --dark-bg-primary: #121212; /* √€„ﬁ Œ·›Ì… ··„Êﬁ⁄ (··‹ body, navbar, footer) */
+    --dark-bg-secondary: #1e1e1e; /* Œ·›Ì… ··⁄‰«’— „À· «·ﬂ—Ê  Ê«·Ãœ«Ê· (œ«Œ· «·‹ container) */
+    --dark-bg-tertiary: #2a2a2a; /* Œ·›Ì… ··⁄‰«’— ⁄‰œ «·‹ hover √Ê Active √Ê inputs */
+    --text-light: #e0e0e0; /* ·Ê‰ «·‰’ «·√”«”Ì «·›« Õ */
+    --text-muted-dark: #b0b0b0; /* ·Ê‰ «·‰’ «·»«Â  */
+    --accent-color: #8a2be2; /* «·»‰›”ÃÌ */
+    --accent-color-hover: #6a1aae;
+    --price-color: #00ff00; /* «·√Œ÷— «·›Ê”›Ê—Ì */
+    --border-color-dark: rgba(255, 255, 255, 0.15); /* ÕœÊœ Œ›Ì›… Ê√ﬂÀ— Ê÷ÊÕ« */
+    --shadow-color-light: rgba(0, 0, 0, 0.4); /* Ÿ· Œ›Ì› */
+    --shadow-color-heavy: rgba(0, 0, 0, 0.7); /* Ÿ· ÀﬁÌ· */
+    --error-color: #dc3545; /* √Õ„— ··«Œÿ«¡ */
+    --success-color: #28a745; /* √Œ÷— ··‰Ã«Õ */
+    --info-color: #17a2b8; /* √“—ﬁ ··„⁄·Ê„«  */
+    --warning-color: #ffc107; /* √’›— ·· Õ–Ì—«  */
+}
+
+/* Global HTML & Body styles for Sticky Footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* ·„‰⁄ scrollbar √›ﬁÌ €Ì— „—€Ê» ›ÌÂ */
+}
+
+body {
+    background-color: var(--dark-bg-primary);
+    color: var(--text-light);
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* ÌŒ·Ì «·‹ main Ì«Œœ ﬂ· «·„”«Õ… «·„ «Õ… ÊÌ“ﬁ «·‹ footer · Õ  */
+    padding-bottom: 20px; /* „”«›… „‰ «·‹ footer */
+    padding-top: 20px; /* „”«›… „‰ «·‹ navbar */
+}
+
+/* Global Font and Text Color for all elements */
+* { /* Apply globally, then override as needed */
+    font-family: 'Times New Roman', serif;
+    color: var(--text-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', cursive; /* «” Œœ«„ «·Œÿ «·“Œ—›Ì ··⁄‰«ÊÌ‰ */
+    color: var(--text-light); /* ·÷„«‰ √‰ «·⁄‰«ÊÌ‰  √Œ– «··Ê‰ «·›« Õ */
+    text-shadow: 0 0 5px var(--shadow-color-light); /* Ÿ· Œ›Ì› */
+}
+/* Override specific Bootstrap classes to ensure text color */
+.text-dark {
+    color: var(--text-light) !important;
+}
+/* ⁄‘«‰ «·‹ Navbar links ·Ê Bootstrap Õÿ text-dark */
+.text-muted {
+    color: var(--text-muted-dark) !important;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--accent-color-hover);
+        text-decoration: underline;
+    }
+
+/* Navbar and Footer from _Layout.cshtml */
+header .navbar {
+    background-color: var(--dark-bg-primary) !important;
+    border-color: var(--border-color-dark) !important;
+    box-shadow: 0 2px 10px var(--shadow-color-heavy); /* Ÿ· √ﬁÊÏ ··‹ navbar */
+}
+
+    header .navbar .nav-link {
+        color: var(--text-light) !important; /* ·÷„«‰ ·Ê‰ «··Ì‰ﬂ«  ›Ì Navbar */
+    }
+
+        header .navbar .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+footer {
+    background-color: var(--dark-bg-primary) !important;
+    border-color: var(--border-color-dark) !important;
+    color: var(--text-muted-dark) !important;
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px var(--shadow-color-heavy); /* Ÿ· √ﬁÊÏ ··‹ footer */
+}
+
+    footer a {
+        color: var(--accent-color) !important;
+    }
+
+/* Adjust general container/main content area */
+.container {
+    background-color: var(--dark-bg-secondary);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-color-light);
+    color: var(--text-light);
+    margin-top: 20px; /* „”«›… „‰ Navbar */
+    margin-bottom: 20px; /* „”«›… „‰ Footer */
+}
+
+/* Table styling for dark theme */
+.table {
+    color: var(--text-light);
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--border-color-dark);
+}
+
+    .table th, .table td {
+        border-color: var(--border-color-dark);
+        padding: 12px;
+        vertical-align: middle;
+    }
+
+.table-hover tbody tr:hover {
+    color: #fff;
+    background-color: rgba(138,43,226,0.1);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.table-dark {
+    background-color: var(--dark-bg-secondary) !important;
+    color: var(--text-light) !important;
+}
+
+.table-light {
+    background-color: var(--dark-bg-secondary) !important;
+    color: var(--text-light) !important;
+}
+
+/* Card styling for dark theme (outside of Home page specific cards) */
+.card {
+    background-color: var(--dark-bg-secondary);
+    color: var(--text-light);
+    border-color: var(--border-color-dark);
+    box-shadow: 0 4px 15px var(--shadow-color-light);
+}
+
+.card-header {
+    background-color: var(--dark-bg-tertiary) !important;
+    color: var(--text-light) !important;
+}
+
+/* Form Group styling for dark theme */
+.form-label, .control-label {
+    color: var(--text-light);
+}
+
+.form-control, .form-select {
+    background-color: var(--dark-bg-tertiary);
+    color: var(--text-light);
+    border-color: var(--border-color-dark);
+}
+
+    .form-control:focus, .form-select:focus {
+        background-color: var(--dark-bg-tertiary);
+        color: var(--text-light);
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 0.25rem rgba(138,43,226,0.25);
+    }
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e0e0e0' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Validation messages */
+.text-danger {
+    color: var(--error-color) !important;
+}
+
+.input-validation-error {
+    border-color: var(--error-color) !important;
+}
+
+/* Alert messages (from TempData in _Layout) */
+.alert {
+    margin-top: 15px;
+    color: var(--dark-bg-primary); /* ‰’ œ«ﬂ‰ ⁄·Ï Œ·›Ì… ›« Õ… ··√·— ” */
+    font-weight: bold;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Badge styles (used in Order Index/Details) */
+.badge {
+    padding: 0.5em 0.8em;
+    border-radius: 0.35rem;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    .badge.bg-secondary {
+        background-color: #6c757d !important;
+        color: white;
+    }
+
+    .badge.bg-info {
+        background-color: #17a2b8 !important;
+        color: white;
+    }
+
+    .badge.bg-success {
+        background-color: #28a745 !important;
+        color: white;
+    }
+
+    .badge.bg-primary {
+        background-color: #0d6efd !important;
+        color: white;
+    }
+
+    .badge.bg-danger {
+        background-color: #dc3545 !important;
+        color: white;
+    }
+
+/* General button styles for dark theme */
+.btn {
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: var(--accent-color-hover);
+        border-color: var(--accent-color-hover);
+    }
+
+.btn-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: white;
+}
+
+    .btn-info:hover {
+        background-color: #138496;
+        border-color: #117a8b;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+
+.btn-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: var(--dark-bg-primary);
+}
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+        border-color: #da9b00;
+    }
+
+.btn-danger {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+    color: white;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+.btn-outline-primary {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+    .btn-outline-primary:hover {
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+/* Home page specific styles (from Index.cshtml <style> block) */
+.hero-section {
+    background: url('/res.png') no-repeat center center/cover; /* <<===  √ﬂœ √‰ Â–« «·„”«— ’ÕÌÕ */
+    color: #f8f9fa;
+    padding: 150px 0;
+    text-shadow: 0 0 15px rgba(0,0,0,0.9), 0 0 5px rgba(0,0,0,0.5);
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    animation: fadeInDown 1.5s ease-out;
+    letter-spacing: 2px;
+}
+
+.hero-section p {
+    font-family: 'Times New Roman', serif;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    animation: fadeInUp 1.5s ease-out;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.call-to-action .btn {
+    font-size: 1.4rem;
+    padding: 20px 45px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.call-to-action .btn-warning {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+    .call-to-action .btn-warning:hover {
+        background-color: var(--accent-color-hover);
+        border-color: var(--accent-color-hover);
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 12px 25px var(--shadow-color-heavy);
+    }
+
+.call-to-action .btn-outline-light {
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+    .call-to-action .btn-outline-light:hover {
+        background-color: rgba(255,255,255,0.15);
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+
+.section-title {
+    color: var(--text-light);
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 3.5rem;
+    position: relative;
+    padding-bottom: 20px;
+    text-shadow: 0 0 10px rgba(138,43,226,0.5);
+}
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 5px;
+        width: 100px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+    }
+
+.menu-item-card {
+    border: 1px solid var(--border-color-dark);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow-color-heavy);
+    background-color: var(--dark-bg-tertiary);
+    color: var(--text-light);
+}
+
+    .menu-item-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 15px 40px var(--shadow-color-heavy);
+        border-color: var(--accent-color);
+    }
+
+    .menu-item-card .card-img-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        height: 250px;
+        background-color: var(--dark-bg-primary);
+        border-bottom: 1px solid var(--border-color-dark);
+    }
+
+        .menu-item-card .card-img-container img {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+
+    .menu-item-card .card-body {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .menu-item-card .card-title {
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: var(--text-light);
+        text-shadow: 0 0 8px rgba(138,43,226,0.3);
+    }
+
+    .menu-item-card .card-text {
+        color: var(--text-muted-dark);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .menu-item-card .price {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--price-color);
+        margin-bottom: 25px;
+        text-shadow: 0 0 8px rgba(0,255,0,0.5);
+    }
+
+    .menu-item-card .btn-outline-primary {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 12px 25px;
+        border-radius: 25px;
+    }
+
+        .menu-item-card .btn-outline-primary:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+.about-us-section {
+    background-color: var(--dark-bg-secondary);
+    padding: 100px 0;
+    margin-top: 80px;
+    box-shadow: inset 0 8px 25px var(--shadow-color-heavy);
+    color: var(--text-light);
+}
+
+    .about-us-section h2 {
+        color: var(--text-light);
+        font-family: 'Cinzel Decorative', cursive;
+    }
+
+    .about-us-section p {
+        color: var(--text-muted-dark);
+        font-size: 1.25rem;
+        line-height: 1.9;
+    }
+
+    .about-us-section img {
+        border-radius: 10px;
+        box-shadow: 0 10px 30px var(--shadow-color-heavy);
+    }
+
+.contact-section {
+    background-color: var(--dark-bg-primary);
+    padding: 100px 0;
+    text-align: center;
+    color: var(--text-light);
+    border-top: 5px solid var(--accent-color);
+}
+
+    .contact-section h2 {
+        color: white;
+        font-family: 'Cinzel Decorative', cursive;
+    }
+
+    .contact-section p {
+        font-size: 1.3rem;
+        color: var(--text-muted-dark);
+        line-height: 1.8;
+    }
+
+    .contact-section a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+            color: var(--accent-color-hover);
+        }
+
+/* Animations */
+@@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Google Fonts (moved to the top of the file) */
+/* @@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap'); */

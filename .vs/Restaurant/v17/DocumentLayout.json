@@ -1,0 +1,562 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\custom middleware\\resetavailabilitymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\custom middleware\\resetavailabilitymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\bl\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|solutionrelative:bl\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\bl\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|solutionrelative:bl\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\bl\\services\\menuitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|solutionrelative:bl\\services\\menuitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\bl\\interfaces\\imenuitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|solutionrelative:bl\\interfaces\\imenuitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\controllers\\menuitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\controllers\\menuitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\orders\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\orders\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\orders\\ordercreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\orders\\ordercreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\categories\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\categories\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\categories\\categorycreateeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\categories\\categorycreateeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\menuitems\\menuitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\menuitems\\menuitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\menuitems\\menuitemcreateeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\menuitems\\menuitemcreateeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\models\\modelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\models\\modelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\models\\dailymenuitemactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\models\\dailymenuitemactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\bl\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|solutionrelative:bl\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\bl\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA70F45-E5D8-46FE-869C-34D55A90F949}|BL\\BLL.csproj|solutionrelative:bl\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\viewmodels\\orders\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\viewmodels\\orders\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\data\\migrations\\20250621095454_estimated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\data\\migrations\\20250621095454_estimated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\dal\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4009A40-8C0E-48EC-AA38-9CBE7CC2691C}|DAL\\DAL.csproj|solutionrelative:dal\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|c:\\users\\legion\\source\\repos\\restaurant\\pl\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{075E887A-235D-41D8-814F-7BFD29903612}|PL\\PL.csproj|solutionrelative:pl\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{904ea1b4-c6a7-4eca-94a1-76eab06c5187}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Repositories\\GenericRepository.cs*",
+              "RelativeToolTip": "DAL\\Repositories\\GenericRepository.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:21:33.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ResetAvailabilityMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Custom Middleware\\ResetAvailabilityMiddleware.cs",
+              "RelativeDocumentMoniker": "PL\\Custom Middleware\\ResetAvailabilityMiddleware.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Custom Middleware\\ResetAvailabilityMiddleware.cs",
+              "RelativeToolTip": "PL\\Custom Middleware\\ResetAvailabilityMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:10:40.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "PL\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "PL\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:43:24.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "BL\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "BL\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:39:59.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMenuItemService.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Interfaces\\IMenuItemService.cs",
+              "RelativeDocumentMoniker": "BL\\Interfaces\\IMenuItemService.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Interfaces\\IMenuItemService.cs",
+              "RelativeToolTip": "BL\\Interfaces\\IMenuItemService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:12:24.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuItemService.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Services\\MenuItemService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\MenuItemService.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Services\\MenuItemService.cs",
+              "RelativeToolTip": "BL\\Services\\MenuItemService.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAowFQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:14:24.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "DAL\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:21:29.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoryCreateEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Categories\\CategoryCreateEditViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\Categories\\CategoryCreateEditViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Categories\\CategoryCreateEditViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\Categories\\CategoryCreateEditViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:50:18.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Services\\OrderService.cs",
+              "RelativeToolTip": "BL\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T09:39:47.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CategoryViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Categories\\CategoryViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\Categories\\CategoryViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Categories\\CategoryViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\Categories\\CategoryViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:50:19.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderCreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Orders\\OrderCreateViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\Orders\\OrderCreateViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Orders\\OrderCreateViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\Orders\\OrderCreateViewModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA1wA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:50:21.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Orders\\OrderItemViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\Orders\\OrderItemViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Orders\\OrderItemViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\Orders\\OrderItemViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:50:28.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "PL\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "PL\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T09:39:33.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MenuItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\MenuItemsController.cs",
+              "RelativeDocumentMoniker": "PL\\Controllers\\MenuItemsController.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\MenuItemsController.cs",
+              "RelativeToolTip": "PL\\Controllers\\MenuItemsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:42:48.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PL\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PL\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:28:52.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MenuItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\MenuItems\\MenuItemViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\MenuItems\\MenuItemViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\MenuItems\\MenuItemViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\MenuItems\\MenuItemViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:50:11.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MenuItemCreateEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\MenuItems\\MenuItemCreateEditViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\MenuItems\\MenuItemCreateEditViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\MenuItems\\MenuItemCreateEditViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\MenuItems\\MenuItemCreateEditViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAywB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:50:02.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\ModelBase.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\ModelBase.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\ModelBase.cs",
+              "RelativeToolTip": "DAL\\Models\\ModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:49:50.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\MenuItem.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\MenuItem.cs",
+              "RelativeToolTip": "DAL\\Models\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:49:49.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Services\\CategoryService.cs",
+              "RelativeToolTip": "BL\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwB8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:45:58.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "BL\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\BL\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "BL\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:40:06.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DailyMenuItemActivity.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\DailyMenuItemActivity.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\DailyMenuItemActivity.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\DailyMenuItemActivity.cs",
+              "RelativeToolTip": "DAL\\Models\\DailyMenuItemActivity.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T12:42:30.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PL\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T10:30:32.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PL\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACEBAAAAAAAAAAAiwCUBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T10:29:06.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Orders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "PL\\Views\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAIwEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T10:25:36.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Program.cs",
+              "RelativeDocumentMoniker": "PL\\Program.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Program.cs",
+              "RelativeToolTip": "PL\\Program.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAIwDoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:11:30.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "PL\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "PL\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEQCAAAAAAAAAAAAAFsCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-21T11:11:18.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PL.csproj",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\PL.csproj",
+              "RelativeDocumentMoniker": "PL\\PL.csproj",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\PL.csproj",
+              "RelativeToolTip": "PL\\PL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-21T10:10:07.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Orders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Orders\\Details.cshtml",
+              "RelativeToolTip": "PL\\Views\\Orders\\Details.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAACwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T09:58:54.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Models\\Order.cs",
+              "RelativeToolTip": "DAL\\Models\\Order.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA7wCsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T09:53:08.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20250621095454_estimated.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Data\\Migrations\\20250621095454_estimated.cs",
+              "RelativeDocumentMoniker": "DAL\\Data\\Migrations\\20250621095454_estimated.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\DAL\\Data\\Migrations\\20250621095454_estimated.cs",
+              "RelativeToolTip": "DAL\\Data\\Migrations\\20250621095454_estimated.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T09:54:55.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Orders\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "PL\\ViewModels\\Orders\\OrderViewModel.cs",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\ViewModels\\Orders\\OrderViewModel.cs",
+              "RelativeToolTip": "PL\\ViewModels\\Orders\\OrderViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAABCwBwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T09:58:31.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Orders\\Create.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Orders\\Create.cshtml",
+              "ToolTip": "C:\\Users\\LEGION\\source\\repos\\Restaurant\\PL\\Views\\Orders\\Create.cshtml",
+              "RelativeToolTip": "PL\\Views\\Orders\\Create.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwKAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T09:40:13.836Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

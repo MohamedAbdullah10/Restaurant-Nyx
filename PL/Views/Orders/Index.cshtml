@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PL.ViewModels.Orders.OrderViewModel>
+
+@{
+    ViewData["Title"] = "Orders List";
+}
+
+<h1 class="mb-4">All Orders</h1>
+
+<p class="mb-3">
+    <a asp-action="Create" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Order</a>
+</p>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
+                <th>@Html.DisplayNameFor(model => model.Status)</th>
+                <th>@Html.DisplayNameFor(model => model.Type)</th>
+                <th>@Html.DisplayNameFor(model => model.TotalAmount)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.OrderDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        <span class="badge @(item.Status == DAL.Models.OrderStatus.Pending ? "bg-secondary" :
+                                            item.Status == DAL.Models.OrderStatus.Preparing ? "bg-info text-dark" :
+                                            item.Status == DAL.Models.OrderStatus.Ready ? "bg-success" :
+                                            item.Status == DAL.Models.OrderStatus.Delivered ? "bg-primary" : "bg-danger")">
+                            @item.Status
+                        </span>
+                    </td>
+                    <td>@item.Type</td>
+                    <td>@item.TotalAmount.ToString("C")</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Order Actions">
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="View Details"><i class="fas fa-info-circle"></i> Details</a>
+                            <a asp-action="UpdateStatus" asp-route-id="@item.Id" class="btn btn-sm btn-warning ms-1" title="Update Status"><i class="fas fa-edit"></i> Update Status</a>
+                            @if (item.Status != DAL.Models.OrderStatus.Ready && item.Status != DAL.Models.OrderStatus.Delivered && item.Status != DAL.Models.OrderStatus.Cancelled)
+                            {
+                                <form asp-action="CancelOrder" asp-route-id="@item.Id" method="post" class="d-inline ms-1" onsubmit="return confirm('Are you sure you want to cancel this order? This cannot be undone!');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-danger" title="Cancel Order"><i class="fas fa-times-circle"></i> Cancel</button>
+                                </form>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info" role="alert">
+        No orders found. Start by creating a new order!
+    </div>
+}
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> @* استبدل بـ Font Awesome CDN أو ملفك المحلي *@
+}

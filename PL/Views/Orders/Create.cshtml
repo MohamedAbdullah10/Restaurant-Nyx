@@ -1,0 +1,161 @@
+﻿@model PL.ViewModels.Orders.OrderCreateViewModel
+
+@{
+    ViewData["Title"] = "Create New Order";
+}
+
+<h1 class="mb-4">Create New Order</h1>
+
+<div class="row">
+    <div class="col-md-8"> @* زيادة عرض الفورم قليلا لاستيعاب المزيد من العناصر *@
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            @Html.AntiForgeryToken()
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    Order Type & Delivery
+                </div>
+                <div class="card-body">
+                    <div class="form-group mb-3">
+                        <label asp-for="Type" class="form-label"></label>
+                        <select asp-for="Type" class="form-control" asp-items="Html.GetEnumSelectList<DAL.Models.OrderType>()" id="orderTypeSelect"></select>
+                        <span asp-validation-for="Type" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3" id="deliveryAddressGroup" style="display:none;">
+                        <label asp-for="DeliveryAddress" class="form-label"></label>
+                        <input asp-for="DeliveryAddress" class="form-control" />
+                        <span asp-validation-for="DeliveryAddress" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    Order Items
+                </div>
+                <div class="card-body">
+                    <div id="orderItemsContainer">
+                        @* Render existing items or an initial empty one *@
+                        @if (Model.OrderItems != null && Model.OrderItems.Any())
+                        {
+                            for (int i = 0; i < Model.OrderItems.Count; i++)
+                            {
+                                <partial name="_OrderItemInputPartial" model="Model.OrderItems[i]" view-data='new ViewDataDictionary(ViewData) { { "Index", i } }' />
+                            }
+                        }
+                        else
+                        {
+                            <partial name="_OrderItemInputPartial" model="new PL.ViewModels.Orders.OrderItemInputViewModel()" view-data='new ViewDataDictionary(ViewData) { { "Index", 0 } }' />
+                        }
+                    </div>
+                    <button type="button" id="addOrderItem" class="btn btn-success mt-3"><i class="fas fa-plus-circle"></i> Add Item</button>
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-check-circle"></i> Place Order</button>
+                <a asp-action="Index" class="btn btn-secondary btn-lg ms-2"><i class="fas fa-list"></i> Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var orderTypeSelect = document.getElementById('orderTypeSelect');
+            var deliveryAddressGroup = document.getElementById('deliveryAddressGroup');
+            var deliveryAddressInput = deliveryAddressGroup ? deliveryAddressGroup.querySelector('input[name="DeliveryAddress"]') : null; 
+
+            var orderItemsContainer = document.getElementById('orderItemsContainer');
+            var addOrderItemBtn = document.getElementById('addOrderItem');
+            var itemIndex = orderItemsContainer.children.length; 
+
+            // Pass Menu Items data from Razor to JavaScript as a global variable
+            // This ensures the data is available when needed for dynamic additions.
+            // Using PascalCase to access properties in C# model, then camelCase in JS
+            window.menuItemsData = @Html.Raw(Json.Serialize(ViewBag.MenuItems)); 
+            
+            function toggleDeliveryAddress() {
+                var isDelivery = parseInt(orderTypeSelect.value) === @((int)DAL.Models.OrderType.Delivery);
+
+                if (isDelivery) {
+                    deliveryAddressGroup.style.display = 'block';
+                } else {
+                    deliveryAddressGroup.style.display = 'none';
+                    if (deliveryAddressInput) {
+                        deliveryAddressInput.value = '';
+                        $('span[data-valmsg-for="DeliveryAddress"]').empty();
+                        $(deliveryAddressInput).removeClass('input-validation-error');
+                        var validator = $('form').data('validator');
+                        if (validator && validator.element) {
+                            validator.element(deliveryAddressInput);
+                        }
+                    }
+                }
+            }
+
+            toggleDeliveryAddress();
+            orderTypeSelect.addEventListener('change', toggleDeliveryAddress);
+
+            function addOrderItemRow() {
+                var newRowHtml = `
+                    <div class="order-item-row border p-3 mb-3 bg-light rounded shadow-sm">
+                        <div class="row g-3 align-items-end">
+                            <div class="col-md-7">
+                                <label for="OrderItems_${itemIndex}__MenuItemId" class="form-label">Menu Item</label>
+                                <select name="OrderItems[${itemIndex}].MenuItemId" id="OrderItems_${itemIndex}__MenuItemId" class="form-control" required>
+                                    <option value="">-- Select Menu Item --</option>
+                                    ${generateMenuItemsOptions(window.menuItemsData)} // <<< التعديل هنا
+                                </select>
+                                <span data-valmsg-for="OrderItems[${itemIndex}].MenuItemId" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="OrderItems_${itemIndex}__Quantity" class="form-label">Quantity</label>
+                                <input type="number" name="OrderItems[${itemIndex}].Quantity" id="OrderItems_${itemIndex}__Quantity" class="form-control" value="1" min="1" required />
+                                <span data-valmsg-for="OrderItems[${itemIndex}].Quantity" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <button type="button" class="btn btn-outline-danger remove-item" title="Remove Item"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>`;
+                
+                orderItemsContainer.insertAdjacentHTML('beforeend', newRowHtml);
+                itemIndex++;
+                
+                var form = document.querySelector('form');
+                if (form) {
+                    var validator = $(form).data('validator');
+                    if (validator) {
+                        validator.destroy();
+                    }
+                    $.validator.unobtrusive.parse(form);
+                }
+            }
+            
+            // <<< Function جديدة لبناء الـ Options
+            function generateMenuItemsOptions(itemsData) {
+                var optionsHtml = '';
+                if (itemsData && itemsData.length > 0) {
+                    itemsData.forEach(function(item) {
+                        optionsHtml += `<option value="${item.value}">${item.text}</option>`;
+                    });
+                }
+                return optionsHtml;
+            }
+
+            addOrderItemBtn.addEventListener('click', addOrderItemRow);
+
+            orderItemsContainer.addEventListener('click', function (e) {
+                if (e.target.classList.contains('remove-item') || e.target.closest('.remove-item')) {
+                    e.target.closest('.order-item-row').remove();
+                }
+            });
+        });
+    </script>
+}ٍ
